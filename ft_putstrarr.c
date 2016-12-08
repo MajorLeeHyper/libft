@@ -6,7 +6,7 @@
 /*   By: dnelson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/06 08:15:18 by dnelson           #+#    #+#             */
-/*   Updated: 2016/12/06 08:16:26 by dnelson          ###   ########.fr       */
+/*   Updated: 2016/12/08 11:41:12 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	ft_putstrarr(char **arr)
 	while (*arr)
 	{
 		ft_putchar(',');
+		ft_putchar(' ');
 		ft_putstr(*arr++);
 	}
 	ft_putchar(']');
