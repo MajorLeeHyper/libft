@@ -6,7 +6,7 @@
 /*   By: dnelson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/02 14:38:10 by dnelson           #+#    #+#             */
-/*   Updated: 2016/12/06 12:47:52 by dnelson          ###   ########.fr       */
+/*   Updated: 2016/12/09 11:11:27 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,23 @@ static size_t	ft_count_split(char *str, char c)
 {
 	size_t	i;
 	size_t	count;
-	int		yes;
+	int		space_check;
 
 	count = 0;
 	i = 0;
-	yes = 0;
+	space_check = 0;
 	while (str[i])
 	{
 		if (str[i] == c)
 		{
-			if (yes == 1)
+			if (space_check == 1)
 			{
 				count++;
-				yes = 0;
+				space_check = 0;
 			}
 		}
-		else if (yes == 0)
-			yes = 1;
+		else if (space_check == 0)
+			space_check = 1;
 		i++;
 	}
 	if (str[i - 1] != c && i != 0)
