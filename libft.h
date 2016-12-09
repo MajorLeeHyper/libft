@@ -6,7 +6,7 @@
 /*   By: dnelson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 11:33:53 by dnelson           #+#    #+#             */
-/*   Updated: 2016/12/05 13:07:06 by dnelson          ###   ########.fr       */
+/*   Updated: 2016/12/09 11:18:45 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,5 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 char				*ft_strrev(char *str);
 int					ft_isprime(int nb);
 void				ft_putstrarr(char **arr);
+void				ft_swap(size_t *a, size_t *b);
 #endif
