@@ -6,7 +6,7 @@
 /*   By: dnelson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 11:33:53 by dnelson           #+#    #+#             */
-/*   Updated: 2016/12/09 11:18:45 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/31 17:05:15 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# define BUFF_SIZE 32
+# define MAX_FD 1024
 
 typedef struct		s_list
 {
@@ -86,5 +88,15 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 char				*ft_strrev(char *str);
 int					ft_isprime(int nb);
 void				ft_putstrarr(char **arr);
-void				ft_swap(size_t *a, size_t *b);
+void				ft_swap(int *a, int *b);
+int					get_next_line(const int fd, char **line);
+int					ft_getnbr(char *str);
+size_t				ft_strlenc(const char *str, char c);
+long				ft_absolute_v(long num);
+int					ft_strchr_count(char *str, char c);
+void				ft_strchr_replace(char *str, char c, size_t start,
+		size_t end);
+int					ft_compare_int(int a, int b);
+int					ft_rev_compare_int(int a, int b);
+char				*ft_itoa_base(int value, int base);
 #endif
