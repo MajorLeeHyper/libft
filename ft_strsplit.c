@@ -3,21 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnelson <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/02 14:38:10 by dnelson           #+#    #+#             */
-/*   Updated: 2016/12/09 11:11:27 by dnelson          ###   ########.fr       */
+/*   Created: 2017/01/28 14:35:53 by dnelson           #+#    #+#             */
+/*   Updated: 2017/08/02 15:57:42 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <strings.h>
 
 static size_t	word_count(char *str, char c)
 {
 	size_t		i;
 	size_t		words;
-	int		toggle;
+	int			toggle;
 
 	i = 0;
 	words = 0;

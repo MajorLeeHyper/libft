@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstprint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/01 15:59:41 by dnelson           #+#    #+#             */
-/*   Updated: 2017/08/02 15:55:42 by dnelson          ###   ########.fr       */
+/*   Created: 2016/12/14 11:36:25 by dnelson           #+#    #+#             */
+/*   Updated: 2017/08/02 15:33:22 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_lstprint(t_list *lst)
 {
-	size_t	i;
-	char	c2;
-	char	*s2;
+	t_list	*to_print;
 
-	i = 0;
-	c2 = (char)c;
-	s2 = (char*)s;
-	while (*s2)
+	to_print = lst;
+	while (to_print != NULL)
 	{
-		s2++;
-		i++;
+		ft_putstr((char*)to_print->content);
+		to_print = to_print->next;
 	}
-	while (i > 0)
-	{
-		if (*s2 == c2)
-			return (s2);
-		s2--;
-		i--;
-	}
-	if (s2[0] == c2)
-		return (s2);
-	return (NULL);
 }

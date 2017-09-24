@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnelson <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 11:16:44 by dnelson           #+#    #+#             */
-/*   Updated: 2016/12/09 11:18:04 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/08/02 15:58:39 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_swap(size_t *a, size_t *b)
+void	ft_swap(int *a, int *b)
 {
-	size_t	temp;
+	int		temp;
 
 	temp = *a;
 	*a = *b;
