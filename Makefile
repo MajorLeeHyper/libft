@@ -6,7 +6,7 @@
 #    By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/02 15:23:48 by dnelson           #+#    #+#              #
-#    Updated: 2017/09/23 17:18:42 by dnelson          ###   ########.fr        #
+#    Updated: 2017/09/23 17:20:26 by dnelson          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,8 +78,8 @@ FILENAMES = ft_strlen.c \
 			ft_strlenc.c \
 			ft_itoa_base.c
 
-SRCS = $(addprefix srcs/, $(FILENAMES))
-OBJS = $(addprefix objs/, $(FILENAMES:.c=.o))
+SRCS = $(FILENAMES)
+OBJS = $(FILENAMES:.c=.o)
 
 CFLAGS = -Wextra -Wall -Werror
 CFLAGS += -I ./includes
